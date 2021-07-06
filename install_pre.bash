@@ -1,1 +1,1 @@
-sudo apt install git snap zip unzip g++ gcc
+sudo apt install git snap zip unzip g++ gcc wget
