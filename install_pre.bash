@@ -1,0 +1,1 @@
+sudo apt install git snap zip unzip g++ gcc
