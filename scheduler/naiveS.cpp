@@ -30,7 +30,7 @@ int tasksetter(int pid, int cpufrom, int cputo){
     return 0;
 }
 int getPidFromExample(){
-    system("ps ax | grep \"python e\"| grep -v grep > load.txt");
+    system("ps ax | grep \"python \"| grep -v grep > load.txt");
     FILE *f = fopen("load.txt","rb");
     int pid = -1;
     collect.clear();
