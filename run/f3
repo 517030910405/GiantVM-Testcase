@@ -1,0 +1,10 @@
+Time: 3.1 Train Epoch: 1 [0/60000 (0%)]	Loss: 2.304253
+Time: 30.0 Train Epoch: 1 [640/60000 (1%)]	Loss: 1.476085
+Time: 59.4 Train Epoch: 1 [1280/60000 (2%)]	Loss: 0.790418
+Time: 89.4 Train Epoch: 1 [1920/60000 (3%)]	Loss: 0.437041
+Time: 118.2 Train Epoch: 1 [2560/60000 (4%)]	Loss: 0.430170
+Time: 147.1 Train Epoch: 1 [3200/60000 (5%)]	Loss: 0.399255
+Time: 175.9 Train Epoch: 1 [3840/60000 (6%)]	Loss: 0.253785
+Time: 204.0 Train Epoch: 1 [4480/60000 (7%)]	Loss: 0.220885
+Time: 231.6 Train Epoch: 1 [5120/60000 (9%)]	Loss: 0.258979
+Time: 259.4 Train Epoch: 1 [5760/60000 (10%)]	Loss: 0.268073
