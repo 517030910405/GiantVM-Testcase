@@ -49,8 +49,8 @@ def train(args, model, device, train_loader, optimizer, epoch):
                 100. * batch_idx / len(train_loader), loss.item())
             ret = "Time: %.1f "%(time.time()-starttime) + ret
             print(ret)
-            if time.time()-starttime > 10:
-                break
+            # if time.time()-starttime > 10:
+            #     break
             if args.dry_run:
                 break
 
@@ -59,12 +59,10 @@ def test(model, device, test_loader):
     model.eval()
     test_loss = 0
     correct = 0
-    output_all = []
     with torch.no_grad():
         for data, target in test_loader:
             data, target = data.to(device), target.to(device)
             output = model(data)
-            output_all.append(output.detach())
             test_loss += F.nll_loss(output, target, reduction='sum').item()  # sum up batch loss
             pred = output.argmax(dim=1, keepdim=True)  # get the index of the max log-probability
             correct += pred.eq(target.view_as(pred)).sum().item()
@@ -125,7 +123,7 @@ def main():
                        transform=transform)
     dataset2 = datasets.MNIST('../data', train=False,
                        transform=transform)
-    train_loader = torch.utils.data.DataLoader(dataset1,**train_kwargs)
+    train_loader = torch.utils.data.DataLoader(dataset1, shuffle = True, **train_kwargs)
     test_loader = torch.utils.data.DataLoader(dataset2, **test_kwargs)
 
     model = Net().to(device)
